@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+video {
+  position: relative;
+  /* left: -50%; */
+  margin: 0px;
+  width: 100%;
+}
+
+h2 {
+  padding: 25px;
+  margin: 0px;
+  color: rgb(170, 170, 170);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.miniHeader {
+  position: relative;
+  width: 200px;
+  margin: auto;
+}
+
+.miniHeader:before {
+  content: "";
+  width: 150px;
+  height: 100%;
+  position: absolute;
+  bottom: 30px;
+  left: calc((100% - 150px) / 2);
+  border-bottom: 4px solid rgb(170, 170, 170);
+  transform: scaleX(0);
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.miniHeader:hover:before {
+  transform: scaleX(1);
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 5s ease-in-out;
+  height: 80px;
+}
+
+.App-header {
+  position: absolute;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  z-index: 10;
+  /* left: calc((100vw - 190px) / 2); */
+}
+
+.Body-1 {
+  overflow: hidden;
+  background-color: grey;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+.Body-2 {
+  background-color: #f4f4f4;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+.CardHolder {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.footer {
+  height: 50%;
+  background: linear-gradient(to bottom, #f4f4f4 10%, rgba(230, 230, 230, 0) 100%);
+}
+
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+  margin: 0px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.5) rotate(180deg); }
+  to { transform: scale(1) rotate(360deg); }
+}
