@@ -69,7 +69,14 @@ h2 {
 
 .Body-2 {
   background-color: #f4f4f4;
-  height: 100%;
+  height: 40%;
+  width: 100%;
+  color: white;
+}
+
+.Body-3 {
+  background-color: #f4f4f4;
+  height: 70%;
   width: 100%;
   color: white;
 }
@@ -91,6 +98,10 @@ h2 {
 
 .App-intro {
   font-size: large;
+  margin: 0px;
+}
+
+p {
   margin: 0px;
 }
 

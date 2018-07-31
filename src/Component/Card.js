@@ -1,9 +1,9 @@
 import React from 'react';
 import './Card.css';
 
-const person = (props) => {
+const card = (props) => {
     return (
-        <div className ="Card">
+        <div className ="Card" onClick={props.clicked}>
         <div className="CardContent">
         <img src={props.image}/>
          <p>{props.name}</p>
@@ -12,4 +12,4 @@ const person = (props) => {
     )
 }
 
-export default person;
+export default card;

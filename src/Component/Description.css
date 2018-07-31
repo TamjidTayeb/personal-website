@@ -1,0 +1,21 @@
+.Description {
+    display: block;
+    color: gray;
+    background: rgb(231, 231, 231);
+    width: 400px;
+    height: 500px;
+    margin-left: 15%;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-left: 50px;
+    padding-right: 50px; 
+}
+
+.title {
+    text-align: end;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
