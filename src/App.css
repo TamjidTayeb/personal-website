@@ -81,10 +81,45 @@ h2 {
   color: white;
 }
 
+.backBox {
+  background-color: rgb(231, 231, 231);
+  width: 500px;
+  height: 500px;
+  float: right;
+  position: relative;
+  z-index: 3;
+  top: 50px;
+  left: 150px;
+}
+
+.backBox:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  background: salmon;
+}
+
+.imgHolder {
+  background-color: green;
+  width: 400px;
+  height: 500px;
+  float: right;
+  top: 100px;
+  left: 100px;
+  position: relative;
+  z-index: 3;
+}
+
 .CardHolder {
   width: 1000px;
   margin: 0 auto;
 }
+
+
+
 
 .footer {
   height: 50%;

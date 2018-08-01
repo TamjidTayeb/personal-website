@@ -4,13 +4,15 @@
     background: rgb(231, 231, 231);
     width: 400px;
     height: 500px;
-    margin-left: 15%;
     text-align: left;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     padding-left: 50px;
     padding-right: 50px; 
+    float: left;
+    right: 100px;
+    position: relative;
 }
 
 .title {
