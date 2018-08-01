@@ -15,8 +15,8 @@ class App extends Component {
     ],
     projectdescription: [
     {id: 1, name: 'Projects', content: 'Lorem ipsum dolor sit amet, ne scripta definiebas eum. Ignota mucius percipit pro ne, eu vero primis propriae vim. Ut sed dolore impedit expetenda, ex duo expetendis mediocritatem. Purto pericula vel an. Dico cibo augue ad nec. Eripuit laoreet sed ne, ex mollis scribentur vim, pri ad duis partem. Eu docendi theophrastus vix, possim aliquam noluisse id pro. Sed no consul volumus aliquando, dicta tritani equidem vel id. In harum volutpat sea. Cibo legere torquatos pri et.'},
-    {id: 2, name: 'Android', content: '2nd'},
-    {id: 3, name: 'Web Development', content: '3rd'},
+    {id: 2, name: 'Android Development', content: '2nd'},
+    {id: 3, name: 'Website Development', content: '3rd'},
     {id: 4, name:'Software Development', content: '4th'}
     ]
   }
@@ -32,7 +32,7 @@ class App extends Component {
         ...this.state.descriptionChoice
     };
 
-    temp = newIndex
+    temp = newIndex+1
 
     //store new index
     this.setState({descriptionChoice: temp})
