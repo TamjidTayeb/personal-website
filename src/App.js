@@ -17,7 +17,7 @@ class App extends Component {
     {id: 1, name: 'Projects', photo: 'red', content: 'Lorem ipsum dolor sit amet, ne scripta definiebas eum. Ignota mucius percipit pro ne, eu vero primis propriae vim. Ut sed dolore impedit expetenda, ex duo expetendis mediocritatem. Purto pericula vel an. Dico cibo augue ad nec. Eripuit laoreet sed ne, ex mollis scribentur vim, pri ad duis partem. Eu docendi theophrastus vix, possim aliquam noluisse id pro. Sed no consul volumus aliquando, dicta tritani equidem vel id. In harum volutpat sea. Cibo legere torquatos pri et.'},
     {id: 2, name: 'Android Development', photo: 'green', content: '2nd'},
     {id: 3, name: 'Web Development', photo: 'yellow', content: '3rd'},
-    {id: 4, name:'Software Development', photo: 'yellow', content: '4th'}
+    {id: 4, name:'Software Development', photo: 'purple', content: '4th'}
     ]
   }
 
@@ -52,10 +52,22 @@ class App extends Component {
         </div>
     );
 
+    let skillsCards = (
+      <div className="CardHolder">
+        {this.state.cards.map((c, index) => {
+          return <Card 
+            name={c.name} 
+            key={c.id}
+            image={c.image}
+            clicked={(event) => this.changeDescription(event, c.id)}/>
+        })}
+        </div>
+    );
+
     const index = this.state.descriptionChoice;
     let description = this.state.projectdescription[index].content;
     let descriptionName = this.state.projectdescription[index].name;
-    let currentImg = this.state.projectdescription[index].photo;
+    let bg = this.state.projectdescription[index].photo;
 
 
 
@@ -66,19 +78,24 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           {/* <h1 className="App-title">Welcome to React</h1> */}
         </header>
-        <div className="Body-1">
-        <video autoPlay muted loop id="myVideo">
-          <source src="./bgrvideo.mp4" type="video/mp4"/>
-        </video>          
-        </div>
-        <div className="Body-2">
-        <h2 className="miniHeader">Skills</h2>
-        {cards}
+        <div className="Body-1">         
         </div>
         <div className="Body-3">
+        <h2 className="miniHeader two">Skills</h2>
         <div className="CardHolder">
-        <Description content={description} name={descriptionName} image={currentImg}/>
-        <div className="backBox" background={currentImg}>
+        
+        </div>
+        </div>
+        <div className="Body-2">
+        <h2 className="miniHeader one">Projects</h2>
+        {cards}
+        </div>
+        <div className="Body-4">
+        <div className="CardHolder">
+        <Description content={description} name={descriptionName}/>
+        <div className="backBox">
+        <div className="imgHolder" style ={ { background: bg } }>
+        </div>
         </div>
         </div>
         </div>

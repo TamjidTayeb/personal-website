@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden;
+}
 .App {
   text-align: center;
   height: 100vh;
@@ -30,15 +33,29 @@ h2 {
 
 .miniHeader:before {
   content: "";
-  width: 150px;
   height: 100%;
   position: absolute;
   bottom: 30px;
-  left: calc((100% - 150px) / 2);
   border-bottom: 4px solid rgb(170, 170, 170);
   transform: scaleX(0);
   transition: 0.5s;
   z-index: 3;
+}
+
+.miniHeader.two {
+  color: white;
+}
+
+.miniHeader.one:before {
+  width: 200px;
+  left: calc((100% - 200px) / 2);
+}
+
+
+.miniHeader.two:before {
+  width: 150px;
+  left: calc((100% - 150px) / 2);
+  border-bottom: 4px solid white;
 }
 
 .miniHeader:hover:before {
@@ -72,9 +89,20 @@ h2 {
   height: 40%;
   width: 100%;
   color: white;
+  
 }
 
 .Body-3 {
+  background-color: #ccc;
+  height: 80%;
+  width: 100%;
+  color: white;
+  background-image: url('laptopbg.jpg');
+  background-size: cover;
+  filter: grayscale();
+}
+
+.Body-4 {
   background-color: #f4f4f4;
   height: 70%;
   width: 100%;
@@ -87,30 +115,18 @@ h2 {
   height: 500px;
   float: right;
   position: relative;
-  z-index: 3;
   top: 50px;
   left: 150px;
 }
 
-.backBox:before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  background: salmon;
-}
-
 .imgHolder {
   background-color: green;
-  width: 400px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   float: right;
-  top: 100px;
-  left: 100px;
-  position: relative;
-  z-index: 3;
+  top: -50px;
+  left: -50px;
+  position: absolute;
 }
 
 .CardHolder {
