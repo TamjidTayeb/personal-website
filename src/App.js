@@ -7,6 +7,11 @@ import Description from './Component/Description';
 
 class App extends Component {
   state = {
+    skillsCards: [
+      {id: 1, name: 'Soft Skills', image: '', text: ''},
+      {id: 2, name: 'Personal Details', image: '', text: ''},
+      {id: 3, name: 'Technical Skills', image: '', text: ''}
+    ],
     descriptionChoice: 0,
     cards: [
       {id: 1, name: 'Android Development', image: "./android.png"},
@@ -54,12 +59,12 @@ class App extends Component {
 
     let skillsCards = (
       <div className="CardHolder">
-        {this.state.cards.map((c, index) => {
+        {this.state.skillsCards.map((c, index) => {
           return <Card 
             name={c.name} 
             key={c.id}
             image={c.image}
-            clicked={(event) => this.changeDescription(event, c.id)}/>
+            />
         })}
         </div>
     );
@@ -83,7 +88,7 @@ class App extends Component {
         <div className="Body-3">
         <h2 className="miniHeader two">Skills</h2>
         <div className="CardHolder">
-        
+        {skillsCards}
         </div>
         </div>
         <div className="Body-2">
