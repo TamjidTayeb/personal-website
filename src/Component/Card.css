@@ -15,29 +15,65 @@
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
+    position: relative;
 }
 
-.CardContent {
+.Body-2 .Card {
+    color: white;
+}
+
+.Body-2 .Card:first-of-type:before {
+    content: "";
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: -18px;
+    bottom: -18px;
+    border-left: 12px solid purple;
+    border-bottom: 12px solid purple;
+    transition: 0.5s;
+    z-index: 5;
+  }
+
+.Body-2 .Card:last-of-type:before {
+    content: "";
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: -18px;
+    top: -18px;
+    border-right: 12px solid purple;
+    border-top: 12px solid purple;
+    transition: 0.5s;
+    z-index: 5;
+}
+
+.Body-3 .CardContent {
     opacity: 0.5;
     transition: 0.4s;
     padding-top: 20px;
 }
 
-.Card:hover {
+.Body-3 .Card:hover {
     transform: scale(1.03);
 }
 
-.Card img {
+.Body-3 .Card img {
     height: 80px;
     opacity: 0.1;
     transition: 0.4s;
 }
 
-.Card:hover img {
+.Body-2 .Card img {
+    padding:  10px;
+    height: 90px;
+}
+
+.Body-3 .Card:hover img {
     opacity: 0.2;
 }
 
-.Card:hover .CardContent {
+.Body-3 .Card:hover .CardContent {
     opacity: 0.9;
 }
 

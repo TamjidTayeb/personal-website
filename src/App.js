@@ -8,9 +8,9 @@ import Description from './Component/Description';
 class App extends Component {
   state = {
     skillsCards: [
-      {id: 1, name: 'Soft Skills', image: '', text: ''},
-      {id: 2, name: 'Personal Details', image: '', text: ''},
-      {id: 3, name: 'Technical Skills', image: '', text: ''}
+      {id: 1, name: 'Soft Skills', image: './softskills.png', text: 'lololol'},
+      {id: 2, name: 'Personal Details', image: './personal.png', text: 'hehehe'},
+      {id: 3, name: 'Technical Skills', image: './education.png', text: 'hahaha'},
     ],
     descriptionChoice: 0,
     cards: [
@@ -81,17 +81,18 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          {/* <h1 className="App-title">Welcome to React</h1> */}
         </header>
-        <div className="Body-1">         
+        <div className="Body-1">   
+        <h2>PASSIONATE ABOUT SOFTWARE</h2>
+        <h2 style ={ { fontSize: '35px', padding: '0' } }>Tamjid Tayeb</h2>
         </div>
-        <div className="Body-3">
+        <div className="Body-2">
         <h2 className="miniHeader two">Skills</h2>
         <div className="CardHolder">
         {skillsCards}
         </div>
         </div>
-        <div className="Body-2">
+        <div className="Body-3">
         <h2 className="miniHeader one">Projects</h2>
         {cards}
         </div>
@@ -105,6 +106,7 @@ class App extends Component {
         </div>
         </div>
         <div className="footer">
+
         </div>
 
       </div>
