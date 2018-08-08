@@ -82,9 +82,11 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <div className="Body-1">   
+        <div className="start">   
         <h2>PASSIONATE ABOUT SOFTWARE</h2>
-        <h2 style ={ { fontSize: '35px', padding: '0' } }>Tamjid Tayeb</h2>
+        <h2 style ={ { fontSize: '35px', paddingTop: '0'} }>Tamjid Tayeb</h2>
+        </div>
+        <div className="Body-1">
         </div>
         <div className="Body-2">
         <h2 className="miniHeader two">Skills</h2>
