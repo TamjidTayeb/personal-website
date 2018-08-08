@@ -7,6 +7,7 @@ import Description from './Component/Description';
 
 class App extends Component {
   state = {
+    about: 'Lorem ipsum dolor sit amet, ne scripta definiebas eum. Ignota mucius percipit pro ne, eu vero primis propriae vim. Ut sed dolore impedit expetenda, ex duo expetendis mediocritatem. Purto pericula vel an.',
     skillsCards: [
       {id: 1, name: 'Soft Skills', image: './softskills.png', text: 'lololol'},
       {id: 2, name: 'Personal Details', image: './personal.png', text: 'hehehe'},
@@ -73,6 +74,8 @@ class App extends Component {
     let description = this.state.projectdescription[index].content;
     let descriptionName = this.state.projectdescription[index].name;
     let bg = this.state.projectdescription[index].photo;
+    //about text
+    let about = this.state.about;
 
 
 
@@ -87,6 +90,10 @@ class App extends Component {
         <h2 style ={ { fontSize: '35px', paddingTop: '0'} }>Tamjid Tayeb</h2>
         </div>
         <div className="Body-1">
+        <div className="aboutholder">
+        <h2>About</h2>
+        <p>{about}</p>
+        </div>
         </div>
         <div className="Body-2">
         <h2 className="miniHeader two">Skills</h2>

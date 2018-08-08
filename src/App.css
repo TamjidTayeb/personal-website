@@ -103,6 +103,19 @@ h2 {
   background-position-y: 90%;
 }
 
+.Body-2 {
+  background-color: #ccc;
+  height: 80%;
+  width: 100%;
+  color: white;
+  background: linear-gradient(0deg, rgba(0,0,0,0.4),rgba(0,0,0, 0.4)), url('laptopbg.jpg');
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .Body-3 {
   background-color: #fff;
   height: 40%;
@@ -111,26 +124,34 @@ h2 {
   
 }
 
-.Body-2 {
-  background-color: #ccc;
-  height: 80%;
-  width: 100%;
-  color: white;
-  background: linear-gradient(0deg, rgba(0,0,0,0.4),rgba(0,0,0, 0.4)), url('laptopbg.jpg');
-  /* Set a specific height */
-  height: 500px; 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 .Body-4 {
   background-color: #fff;
   height: 70%;
   width: 100%;
   color: white;
+}
+
+.aboutholder {
+  background-color: black;
+  margin: 5%;
+  opacity: 0.4;
+  width: 35%;
+  height: 70%;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 25px;
+}
+
+p .aboutholder {
+  top: 4.7em;
+  position: relative;
+  z-index: 2;
+  opacity: 0.8;
+  color: black;
 }
 
 .backBox {
