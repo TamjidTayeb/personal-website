@@ -44,6 +44,7 @@ class App extends Component {
     this.setState({descriptionChoice: temp})
   }
 
+
   render() {
 
     let cards = (
@@ -77,6 +78,34 @@ class App extends Component {
     //about text
     let about = this.state.about;
 
+    //scroll animation
+    var scrolled = false;
+    function getDocHeight(D) {
+      return Math.max(
+          D.body.scrollHeight, D.documentElement.scrollHeight,
+          D.body.offsetHeight, D.documentElement.offsetHeight,
+          D.body.clientHeight, D.documentElement.clientHeight
+      )
+  }
+  
+  function amountscrolled(){
+    var winheight= window.innerHeight || (document.documentElement || document.body).clientHeight
+    var docheight = getDocHeight(document)
+    var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+    var trackLength = docheight - winheight
+    var pctScrolled = Math.floor(scrollTop/trackLength * 100) // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+
+    if (pctScrolled > 40) {
+      scrolled = true;
+      document.getElementById('anim').className+=" animate";
+    }
+  }
+
+  window.addEventListener("scroll", function(){
+    if (!scrolled) amountscrolled()
+  }, false)
+
+
 
 
 
@@ -90,7 +119,7 @@ class App extends Component {
         <h2 style ={ { fontSize: '35px', paddingTop: '0'} }>Tamjid Tayeb</h2>
         </div>
         <div className="Body-1">
-        <div className="aboutholder">
+        <div className="aboutholder" id="anim">
         <h2>About</h2>
         <div style= { { padding:'25px'}}>
         <p>{about}</p>

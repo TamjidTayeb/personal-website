@@ -144,6 +144,41 @@ h2 {
   font-weight: 400;
   letter-spacing: 1px;
   font-size: 25px;
+  position: relative;
+}
+
+.animate {
+  width: calc(70% - 15px);
+  height: calc(70% - 15px);
+  background-color: aqua;
+}
+
+.aboutholder::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right:-18px;
+  top: 96%;
+  border-bottom: 12px solid #b821f0;
+  border-right: 12px solid #b821f0;
+  opacity: 0.8;
+  transition: 0.5s;
+  z-index: 5;
+}
+
+.aboutholder::after {
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -18px;
+  bottom: 96%;
+  border-left: 12px solid #b821f0;
+  border-top: 12px solid #b821f0;
+  opacity: 0.8;
+  transition: 0.5s;
+  z-index: 5;
 }
 
 p .aboutholder {
