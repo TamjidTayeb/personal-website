@@ -92,7 +92,9 @@ class App extends Component {
         <div className="Body-1">
         <div className="aboutholder">
         <h2>About</h2>
+        <div style= { { padding:'25px'}}>
         <p>{about}</p>
+        </div>
         </div>
         </div>
         <div className="Body-2">

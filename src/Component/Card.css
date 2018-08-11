@@ -20,7 +20,19 @@
 
 .Body-2 .Card {
     color: white;
+    /* width: calc((100% - 1000px)/3); */
+    box-shadow: none;
+    width: 30%;
+    height: 400px;
 }
+
+.Body-2 .CardHolder {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+
 
 .Body-2 .Card:first-of-type:before {
     content: "";
@@ -29,11 +41,13 @@
     position: absolute;
     left: -18px;
     bottom: -18px;
-    border-left: 12px solid purple;
-    border-bottom: 12px solid purple;
+    border-left: 12px solid #b821f0;
+    border-bottom: 12px solid #b821f0;
+    opacity: 0.6;
     transition: 0.5s;
     z-index: 5;
   }
+
 
 .Body-2 .Card:last-of-type:before {
     content: "";
@@ -42,8 +56,9 @@
     position: absolute;
     right: -18px;
     top: -18px;
-    border-right: 12px solid purple;
-    border-top: 12px solid purple;
+    border-right: 12px solid #b821f0;
+    border-top: 12px solid #b821f0;
+    opacity: 0.6;
     transition: 0.5s;
     z-index: 5;
 }
