@@ -95,7 +95,7 @@ class App extends Component {
     var trackLength = docheight - winheight
     var pctScrolled = Math.floor(scrollTop/trackLength * 100) // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
 
-    if (pctScrolled > 40) {
+    if (pctScrolled > 25) {
       scrolled = true;
       document.getElementById('anim').className+=" animate";
     }

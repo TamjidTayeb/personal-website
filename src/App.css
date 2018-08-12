@@ -147,10 +147,10 @@ h2 {
   position: relative;
 }
 
-.animate {
-  width: calc(70% - 15px);
-  height: calc(70% - 15px);
-  background-color: aqua;
+.animate.aboutholder::before, .animate.aboutholder::after{
+  width: 50%;
+  /* height: calc(55px); */
+  height: 50%;
 }
 
 .aboutholder::before {
@@ -158,11 +158,10 @@ h2 {
   width: 35px;
   height: 35px;
   position: absolute;
-  right:-18px;
-  top: 96%;
-  border-bottom: 12px solid #b821f0;
-  border-right: 12px solid #b821f0;
-  opacity: 0.8;
+  right:-25px;
+  bottom: -25px;
+  border-bottom: 15px solid #b821f0;
+  border-right: 15px solid #b821f0;
   transition: 0.5s;
   z-index: 5;
 }
@@ -172,11 +171,10 @@ h2 {
   width: 35px;
   height: 35px;
   position: absolute;
-  left: -18px;
-  bottom: 96%;
-  border-left: 12px solid #b821f0;
-  border-top: 12px solid #b821f0;
-  opacity: 0.8;
+  left: -25px;
+  top: -25px;
+  border-left: 15px solid #b821f0;
+  border-top: 15px solid #b821f0;
   transition: 0.5s;
   z-index: 5;
 }
